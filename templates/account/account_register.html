@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="back">
+<div class="col-6 mx-auto">
+<div class="card p-2">
+<div class="alert alert-primary text-center h3" role="alert">Register your account </div>
+    <form method="post" action="." enctype="multipart/form-data">
+    {% csrf_token %}
+    <div class="mb-3">
+        <label for="exampleUser" class="form-label">Username</label>
+        <input type="text" class="form-control" id="exampleUser" aria-describedby="emailHelp" name="username">
+    </div>
+    <div class="mb-3">
+        <label for="first_name" class="form-label">First Name</label>
+        <input type="text" class="form-control" id="first_name" name="first_name">
+    </div>
+    <div class="mb-3">
+        <label for="last_name" class="form-label">Last Name</label>
+        <input type="text" class="form-control" id="last_name" name="last_name">
+    </div>
+    <div class="mb-3">
+        <label for="exampleInputEmail" class="form-label">Email</label>
+        <input type="email" class="form-control" id="exampleInputEmail"name="email">
+    </div>
+    <div class="mb-3">
+        <label for="exampleMobile" class="form-label">Mobile</label>
+        <input type="tel" class="form-control" id="exampleMobile"name="mobile">
+    </div>
+
+    <label for="exampleFormControlSelect1" class="form-label">User Type</label>
+    <select class="form-control mx-0" name="user_type" id="exampleFormControlSelect1" required=""placeholder="select user type">
+        <option value="" selected="" style=""></option>
+        <option value="male">Student</option>
+        <option value="female">Teacher</option>
+    </select>
+
+    <div class="mb-3">
+        <label for="examplePassword" class="form-label">Password</label>
+        <input type="password" class="form-control" id="examplePassword" name="password">
+    </div>
+    <div class="mb-3">
+        <label for="examplePassword1" class="form-label">Repeat password</label>
+        <input type="password" class="form-control" id="examplePassword1" name="password1">
+    </div>
+ 
+    <input type="submit" class="btn btn-primary"/>
+    </form>
+</div>
+</div>
+</div>
+{% endblock content %}

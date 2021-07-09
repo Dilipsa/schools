@@ -1,0 +1,9 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.back{
+  background-image: url('{% static "images/s3.jpg" %}');
+
+}

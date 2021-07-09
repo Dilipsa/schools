@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<!-- <style>
+.back {
+  background-image: url('{% static "images/s3.jpg" %}');
+
+} -->
+</style>
+<div class="back">
+<div class="col-6 mx-auto mb-5">
+<div class="card p-2">
+<div class="alert alert-primary text-center h3" role="alert">Login to your account</div>
+    <form method="post" action="." enctype="multipart/form-data">
+    {% csrf_token %}
+    <div class="mb-3">
+        <label for="exampleUser" class="form-label">Username</label>
+        <input type="text" class="form-control" id="exampleUser" aria-describedby="emailHelp" name="username">
+    </div>
+    <div class="mb-3">
+        <label for="examplePassword" class="form-label">Password</label>
+        <input type="password" class="form-control" id="examplePassword" name="password">
+    </div>
+    <input type="submit" class="btn btn-primary mb-5">
+    </form>
+</div>
+</div>
+</div>
+{% endblock content %}

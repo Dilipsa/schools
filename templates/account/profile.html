@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+<div class="col-6 mx-auto">
+<div class="alert alert-primary text-center h3" role="alert">Profile details</div>
+<form method="post" action="." enctype="multipart/form-data">
+{% csrf_token %}
+    {{u_form|crispy}}
+    {{p_form|crispy}}
+    {{ app_form|crispy }}
+    <input type="submit" class="btn btn-primary"/>
+    </form>
+</div>
+{% endblock content %}
